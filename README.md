@@ -18,48 +18,22 @@ Java, TestNG, and Maven. The framework follows the Page Object Model (POM) desig
 ## Framework Features
 
 ✔ Page Object Model (POM)
-
 ✔ Data-Driven Testing using Excel
-
 ✔ Cross Browser Support
-
 ✔ Generic Utility Classes
-
 ✔ Business Utility Classes
-
 ✔ TestNG Framework
-
 ✔ Extent Report Integration
-
 ✔ Screenshot Capture on Failure
-
 ✔ Listener Implementation
-
 ✔ JSON-based Configuration
-
 ✔ Maven Project Structure
 
 ## Project Structure
 
-src/test/java
-│
-├── base_utility
-├── generic_utility
-├── listeners_utility
-├── object_repository
-├── crm.contact
-├── crm.documents
-├── crm.lead
-├── crm.login
-├── crm.opportunity
-├── crm.org
-├── crm.products
-
-src/test/resources
-│
-├── commonData.json
-└── testScriptData.xlsx
-
+Project Structure
+-----------------
+<img width="443" height="805" alt="Screenshot 2026-06-25 211808" src="https://github.com/user-attachments/assets/f9391e1a-dad6-42e7-9d50-4393ca429fc5" />
 
 ## Modules Automated
 
