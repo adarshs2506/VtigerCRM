@@ -1,0 +1,125 @@
+# Vtiger CRM Automation Framework
+
+## Overview
+This project is an end-to-end automation framework developed for Vtiger CRM using Selenium WebDriver, 
+Java, TestNG, and Maven. The framework follows the Page Object Model (POM) design pattern and supports Data-Driven Testing.
+
+## Tech Stack
+
+- Java
+- Selenium WebDriver
+- TestNG
+- Maven
+- Apache POI
+- JSON
+- Extent Reports
+- Page Object Model (POM)
+
+## Framework Features
+
+✔ Page Object Model (POM)
+
+✔ Data-Driven Testing using Excel
+
+✔ Cross Browser Support
+
+✔ Generic Utility Classes
+
+✔ Business Utility Classes
+
+✔ TestNG Framework
+
+✔ Extent Report Integration
+
+✔ Screenshot Capture on Failure
+
+✔ Listener Implementation
+
+✔ JSON-based Configuration
+
+✔ Maven Project Structure
+
+## Project Structure
+
+src/test/java
+│
+├── base_utility
+├── generic_utility
+├── listeners_utility
+├── object_repository
+├── crm.contact
+├── crm.documents
+├── crm.lead
+├── crm.login
+├── crm.opportunity
+├── crm.org
+├── crm.products
+
+src/test/resources
+│
+├── commonData.json
+└── testScriptData.xlsx
+
+
+## Modules Automated
+
+- Login
+- Organizations
+- Contacts
+- Leads
+- Opportunities
+- Products
+- Documents
+- Cases
+
+## Design Patterns Used
+
+- Page Object Model (POM)
+- Utility Design Pattern
+
+## Prerequisites
+
+Before running the project, ensure the following are installed:
+
+- Java JDK 17 or above
+- Maven
+- Eclipse IDE
+- Google Chrome Browser
+
+## Configuration
+
+Update the configuration details in:
+
+`commonData.json`
+
+Example:
+
+```json
+{
+  "url":"http://localhost:8888",
+  "un":"admin",
+  "pwd":"****",
+  "bro":"chrome"
+}
+```
+## Running the Tests
+Run Individual Test
+
+Run As → TestNG Test
+
+Run Complete Suite
+by-testng.xml
+
+## Reports
+
+Extent Reports are generated automatically under:
+advance_reports/
+
+Screenshots for failed test cases are stored under:
+screenshots/
+
+## Author
+Adarsh Singh
+
+Author
+Adarsh Singh
