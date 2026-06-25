@@ -1,19 +1,21 @@
 # Vtiger CRM Automation Framework
 
 ## Overview
-This project is an end-to-end automation framework developed for Vtiger CRM using Selenium WebDriver, 
-Java, TestNG, and Maven. The framework follows the Page Object Model (POM) design pattern and supports Data-Driven Testing.
+This project is an end-to-end automation framework developed for Vtiger CRM using Selenium WebDriver, Java, TestNG, Maven, and Jenkins. 
+The framework follows the Page Object Model (POM) design pattern and supports Data-Driven Testing.
 
 ## Tech Stack
 
-- Java
-- Selenium WebDriver
-- TestNG
-- Maven
-- Apache POI
-- JSON
-- Extent Reports
-- Page Object Model (POM)
+Java
+Selenium WebDriver
+TestNG
+Maven
+Jenkins
+Apache POI
+JSON
+Extent Reports
+Page Object Model (POM)
+Git & GitHub
 
 ## Framework Features
 
@@ -38,6 +40,10 @@ Java, TestNG, and Maven. The framework follows the Page Object Model (POM) desig
 ✔ JSON-based Configuration
 
 ✔ Maven Project Structure
+
+✔ Jenkins Continuous Integration (CI)
+
+✔ GitHub Integration
 
 ## Project Structure
 
@@ -65,10 +71,11 @@ Project Structure
 
 Before running the project, ensure the following are installed:
 
-- Java JDK 17 or above
-- Maven
-- Eclipse IDE
-- Google Chrome Browser
+Java JDK 25 or above
+Maven
+Eclipse IDE
+Jenkins
+Google Chrome Browser
 
 ## Configuration
 
@@ -93,6 +100,14 @@ Run As → TestNG Test
 
 Run Complete Suite
 by-testng.xml
+
+## Running Through Jenkins
+
+Configure Jenkins with GitHub repository.
+Configure Maven in Jenkins.
+Add the Maven goal:
+-f vtiger-automation-framework/pom.xml clean test
+Click Build Now to execute the complete automation suite.
 
 ## Reports
 
