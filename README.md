@@ -6,7 +6,7 @@ The framework follows the Page Object Model (POM) design pattern and supports Da
 
 ## Tech Stack
 
-•Java
+• Java
 • Selenium WebDriver
 • TestNG
 • Maven
@@ -93,7 +93,7 @@ Example:
 ```
 ## Running the Tests
 Run Individual Test
-
+<img width="1415" height="803" alt="Screenshot 2026-06-26 022653" src="https://github.com/user-attachments/assets/18eab0a3-c829-487e-a62d-9eec3e9ba735" />
 Run As → TestNG Test
 
 Run Complete Suite
@@ -114,9 +114,11 @@ Click Build Now to execute the complete automation suite.
 
 Extent Reports are generated automatically under:
 advance_reports/
+<img width="1390" height="802" alt="Screenshot 2026-06-25 213232" src="https://github.com/user-attachments/assets/cf578995-d9df-4c33-ad7e-9c31a41602dc" />
 
 Screenshots for failed test cases are stored under:
 screenshots/
+<img width="938" height="482" alt="Screenshot 2026-06-26 022338" src="https://github.com/user-attachments/assets/4f93e19a-04e7-4cad-8e2e-f41d25a5f39f" />
 
 ## Author
 Adarsh Singh
