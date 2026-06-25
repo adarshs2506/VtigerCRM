@@ -7,14 +7,23 @@ The framework follows the Page Object Model (POM) design pattern and supports Da
 ## Tech Stack
 
 Java
+
 Selenium WebDriver
+
 TestNG
+
 Maven
+
 Jenkins
+
 Apache POI
+
 JSON
+
 Extent Reports
+
 Page Object Model (POM)
+
 Git & GitHub
 
 ## Framework Features
@@ -46,8 +55,6 @@ Git & GitHub
 ✔ GitHub Integration
 
 ## Project Structure
-
-Project Structure
 -----------------
 <img width="443" height="805" alt="Screenshot 2026-06-25 211808" src="https://github.com/user-attachments/assets/f9391e1a-dad6-42e7-9d50-4393ca429fc5" />
 
