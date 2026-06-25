@@ -104,6 +104,3 @@ screenshots/
 
 ## Author
 Adarsh Singh
-
-Author
-Adarsh Singh
