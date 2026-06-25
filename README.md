@@ -100,6 +100,7 @@ Run As → TestNG Test
 
 Run Complete Suite
 by-testng.xml
+<img width="887" height="860" alt="Screenshot 2026-06-25 192329" src="https://github.com/user-attachments/assets/9e1ce406-4296-45b2-b086-5f208817ea21" />
 
 ## Running Through Jenkins
 
@@ -108,6 +109,8 @@ Configure Maven in Jenkins.
 Add the Maven goal:
 -f vtiger-automation-framework/pom.xml clean test
 Click Build Now to execute the complete automation suite.
+<img width="1866" height="891" alt="Screenshot 2026-06-26 013139" src="https://github.com/user-attachments/assets/6c78726b-31a7-4026-8e0f-648a37b1dac2" />
+<img width="1847" height="577" alt="Screenshot 2026-06-26 013859" src="https://github.com/user-attachments/assets/405409db-6126-4207-bb33-7b57174c5e16" />
 
 ## Reports
 
