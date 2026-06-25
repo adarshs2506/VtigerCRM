@@ -16,75 +16,107 @@ import generic_utility.FileUtility;
 import generic_utility.JavaUtility;
 import object_repository.HomePage;
 import object_repository.OpportunityPage;
+
 /**
  * OpportunityTest — Automates Create Opportunity flow in Vtiger CRM.
  *
- * Module : Opportunities Extends : BaseClass (handles browser + login + logout)
- *
- * NOTE: Previously CreateOpportunityTest.java was EMPTY (2 bytes). This is a
- * complete implementation.
- *
- * Test Data Source: testScriptData.xlsx → sheet "opportunity"
- *
  * @author Adarsh Singh
  */
-
 public class OpportunityTest extends BaseClass {
 
-	@Test
-	public void createOpportunityTest()
-			throws EncryptedDocumentException, FileNotFoundException, IOException, ParseException {
+    @Test
+    public void createOpportunityTest()
+            throws EncryptedDocumentException, FileNotFoundException, IOException, ParseException, InterruptedException {
 
-		FileUtility fUtil = new FileUtility();
+        // ==============================
+        // Step 1: Read Test Data
+        // ==============================
+        FileUtility fUtil = new FileUtility();
 
-		String baseOppName = fUtil.getDataFromExcelFile("opportunity", 1, 0);
+        String baseOppName = fUtil.getDataFromExcelFile("opportunity", 1, 0);
+        String closingDate = fUtil.getDataFromExcelFile("opportunity", 1, 1);
 
-		String closingDate = fUtil.getDataFromExcelFile("opportunity", 1, 1);
+        String expectedOppName = baseOppName + "_"
+                + JavaUtility.generateRandomNumber();
 
-		String expectedOppName = baseOppName + "_" + JavaUtility.generateRandomNumber();
+        // ==============================
+        // Step 2: Navigate to Opportunity Module
+        // ==============================
+        HomePage hp = new HomePage(driver);
+        hp.getOppLink().click();
 
-		HomePage hp = new HomePage(driver);
-		hp.getOppLink().click();
+        OpportunityPage op = new OpportunityPage(driver);
 
-		OpportunityPage op = new OpportunityPage(driver);
+        op.getCreateOppBtn().click();
 
-		op.getCreateOppBtn().click();
+        // ==============================
+        // Step 3: Fill Opportunity Details
+        // ==============================
+        op.getOppNameField().sendKeys(expectedOppName);
 
-		op.getOppNameField().sendKeys(expectedOppName);
+        op.getClosingDateField().sendKeys(closingDate);
 
-		op.getClosingDateField().sendKeys(closingDate);
+        Select stage = new Select(op.getSalesStageDropdown());
+        stage.selectByIndex(1);
 
-		Select stage = new Select(op.getSalesStageDropdown());
+        // Related To = Organizations
+        Select related = new Select(op.getRelatedToDropdown());
+        related.selectByVisibleText("Organizations");
 
-		stage.selectByIndex(1);
+        // ==============================
+        // Step 4: Select Existing Organization
+        // ==============================
+        String parentWindow = driver.getWindowHandle();
 
-		// Related To = Organizations
-		Select related = new Select(op.getRelatedToDropdown());
+        op.getOrganizationLookupIcon().click();
 
-		related.selectByVisibleText("Organizations");
+        Set<String> allWindows = driver.getWindowHandles();
 
-		// Open lookup window
-		op.getOrganizationLookupIcon().click();
+        for (String window : allWindows) {
 
-		String parent = driver.getWindowHandle();
+            if (!window.equals(parentWindow)) {
+                driver.switchTo().window(window);
+                break;
+            }
+        }
 
-		Set<String> allWindows = driver.getWindowHandles();
+        System.out.println("Switched to Child Window");
 
-		for (String win : allWindows) {
-			driver.switchTo().window(win);
-		}
+        // Existing Organization Name
+        driver.findElement(By.linkText("adarsh_0121_843")).click();
 
-		// Existing Organization name
-		driver.findElement(By.linkText("adarsh_0121_843")).click();
+        System.out.println("Organization selected");
 
-		driver.switchTo().window(parent);
+        // Switch back to parent window
+        driver.switchTo().window(parentWindow);
 
-		op.getSaveBtn().click();
+        System.out.println("Switched to Parent Window");
 
-		String actualOppName = driver.findElement(By.id("dtlview_Opportunity Name")).getText();
+        Thread.sleep(2000);
 
-		Assert.assertEquals(actualOppName, expectedOppName);
+        // ==============================
+        // Step 5: Save Opportunity
+        // ==============================
+        System.out.println("Before Save");
 
-		System.out.println("Opportunity Created Successfully");
-	}
+        op.getSaveBtn().click();
+
+        System.out.println("After Save");
+
+        // ==============================
+        // Step 6: Validation
+        // ==============================
+        String actualOppName = driver
+                .findElement(By.id("dtlview_Opportunity Name"))
+                .getText();
+
+        System.out.println("Expected : " + expectedOppName);
+        System.out.println("Actual   : " + actualOppName);
+
+        Assert.assertEquals(actualOppName, expectedOppName,
+                "Opportunity Name mismatch!");
+
+        System.out.println("Opportunity Created Successfully");
+        System.out.println("Test Completed");
+    }
 }
