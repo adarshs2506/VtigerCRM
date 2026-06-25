@@ -18,15 +18,25 @@ Java, TestNG, and Maven. The framework follows the Page Object Model (POM) desig
 ## Framework Features
 
 ✔ Page Object Model (POM)
+
 ✔ Data-Driven Testing using Excel
+
 ✔ Cross Browser Support
+
 ✔ Generic Utility Classes
+
 ✔ Business Utility Classes
+
 ✔ TestNG Framework
+
 ✔ Extent Report Integration
+
 ✔ Screenshot Capture on Failure
+
 ✔ Listener Implementation
+
 ✔ JSON-based Configuration
+
 ✔ Maven Project Structure
 
 ## Project Structure
