@@ -1,0 +1,36 @@
+<!--
+    parallel.xml — Parallel Execution
+    
+    parallel="tests"   → each <test> block runs in its own thread
+    thread-count="3"   → max 3 threads simultaneously
+    
+    NOTE: For parallel browser execution, use cbt.xml.
+          This XML demonstrates parallel module execution on the same browser.
+    
+    FIX: Added thread-count attribute (was missing — defaults to 5 which can be unstable)
+-->
+<suite parallel="tests" thread-count="3" name="Parallel_Suite">
+
+    <listeners>
+        <listener class-name="listeners_utility.List_Imp" />
+    </listeners>
+
+    <test name="Org_Parallel">
+        <classes>
+            <class name="types_of_execution.OrgTest" />
+        </classes>
+    </test>
+
+    <test name="Contact_Parallel">
+        <classes>
+            <class name="types_of_execution.ContactTest" />
+        </classes>
+    </test>
+
+    <test name="Lead_Parallel">
+        <classes>
+            <class name="types_of_execution.LeadTest" />
+        </classes>
+    </test>
+
+</suite>

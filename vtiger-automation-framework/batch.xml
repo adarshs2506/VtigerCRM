@@ -1,0 +1,32 @@
+<!--
+    batch.xml — Batch / Selective Execution
+    Run specific methods from specific classes.
+    
+    Usage: Right-click → Run As → TestNG Suite (select batch.xml)
+-->
+<suite name="Batch_Suite">
+
+    <listeners>
+        <listener class-name="listeners_utility.List_Imp" />
+    </listeners>
+
+    <test name="Batch_Test">
+        <classes>
+
+            <!-- Run only createOrgTest from OrgTest -->
+            <class name="types_of_execution.OrgTest">
+                <methods>
+                    <include name="createOrgTest" />
+                </methods>
+            </class>
+
+            <!-- Run all methods from ContactTest -->
+            <class name="types_of_execution.ContactTest" />
+
+            <!-- Run all methods from LeadTest -->
+            <class name="types_of_execution.LeadTest" />
+
+        </classes>
+    </test>
+
+</suite>

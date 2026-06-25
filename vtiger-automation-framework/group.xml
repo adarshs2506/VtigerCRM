@@ -1,0 +1,32 @@
+<!--
+    group.xml — Group-based Execution
+    Runs only tests belonging to specified group(s).
+    
+    Groups defined in test classes:
+      @Test(groups = {"smoke"})       — quick sanity checks
+      @Test(groups = {"regression"})  — full regression
+      @Test(groups = {"reg","smoke"}) — both groups
+    
+    Change <include name="smoke" /> to <include name="regression" /> as needed.
+-->
+<suite name="Group_Suite">
+
+    <listeners>
+        <listener class-name="listeners_utility.List_Imp" />
+    </listeners>
+
+    <groups>
+        <run>
+            <!-- Change to "regression" to run full regression -->
+            <include name="smoke" />
+        </run>
+    </groups>
+
+    <test name="Group_Test">
+        <classes>
+            <class name="testng_extra.Demo2Test" />
+            <class name="testng_extra.DemoTest" />
+        </classes>
+    </test>
+
+</suite>
