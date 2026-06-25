@@ -104,7 +104,7 @@ public class BaseClass {
 
 		if (driver != null) {
 			driver.quit();
-			System.out.println("Browser closed");
+//			System.out.println("Browser closed");
 		}
 	}
 

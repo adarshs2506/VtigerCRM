@@ -17,12 +17,6 @@ import java.io.IOException;
 
 /**
  * UploadDocumentTest — Automates Document upload in Vtiger CRM.
- *
- * Was a standalone main() — now a proper TestNG test extending BaseClass
- * Hardcoded file path "C:\\Users\\adars\\..." REMOVED File path now read from
- * testScriptData.xlsx (configurable per machine) if-else println replaced with
- * Assert.assertEquals() Thread.sleep() removed Uses DocumentsPage POM
- *
  * Data Source: testScriptData.xlsx → sheet "documents"
  *
  * @author Adarsh Singh

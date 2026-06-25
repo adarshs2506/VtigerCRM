@@ -1,33 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-25T19:47:44 IST" name="Default suite" finished-at="2026-06-25T19:48:16 IST" duration-ms="32377">
+  <suite started-at="2026-06-25T20:47:17 IST" name="Suite" finished-at="2026-06-25T20:49:53 IST" duration-ms="156508">
     <groups>
     </groups>
-    <test started-at="2026-06-25T19:47:44 IST" name="Default test" finished-at="2026-06-25T19:48:16 IST" duration-ms="32377">
-      <class name="crm.opportunity.OpportunityTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.opportunity.OpportunityTest@682b2fa]" started-at="2026-06-25T19:47:44 IST" name="setUp" finished-at="2026-06-25T19:47:45 IST" duration-ms="1626" status="PASS">
+    <test started-at="2026-06-25T20:47:17 IST" name="Test" finished-at="2026-06-25T20:49:53 IST" duration-ms="156508">
+      <class name="crm.contact.ContactTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.contact.ContactTest@217ed35e]" started-at="2026-06-25T20:47:53 IST" name="setUp" finished-at="2026-06-25T20:47:54 IST" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="login()[pri:0, instance:crm.opportunity.OpportunityTest@682b2fa]" started-at="2026-06-25T19:47:45 IST" name="login" finished-at="2026-06-25T19:47:51 IST" duration-ms="5301" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.contact.ContactTest@217ed35e]" started-at="2026-06-25T20:47:54 IST" name="login" finished-at="2026-06-25T20:47:59 IST" duration-ms="5058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createOpportunityTest()[pri:0, instance:crm.opportunity.OpportunityTest@682b2fa]" started-at="2026-06-25T19:47:51 IST" name="createOpportunityTest" finished-at="2026-06-25T19:48:12 IST" duration-ms="21927" status="PASS">
+        <test-method signature="createContactTest()[pri:0, instance:crm.contact.ContactTest@217ed35e]" started-at="2026-06-25T20:47:59 IST" name="createContactTest" finished-at="2026-06-25T20:48:14 IST" duration-ms="14524" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOpportunityTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:crm.opportunity.OpportunityTest@682b2fa]" started-at="2026-06-25T19:48:12 IST" name="logout" finished-at="2026-06-25T19:48:15 IST" duration-ms="3062" status="PASS">
+        </test-method> <!-- createContactTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.contact.ContactTest@217ed35e]" started-at="2026-06-25T20:48:14 IST" name="logout" finished-at="2026-06-25T20:48:16 IST" duration-ms="2158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.opportunity.OpportunityTest@682b2fa]" started-at="2026-06-25T19:48:16 IST" name="tearDown" finished-at="2026-06-25T19:48:16 IST" duration-ms="385" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.contact.ContactTest@217ed35e]" started-at="2026-06-25T20:48:16 IST" name="tearDown" finished-at="2026-06-25T20:48:16 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.contact.ContactTest -->
+      <class name="crm.org.CreateOrganizationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.org.CreateOrganizationTest@682b2fa]" started-at="2026-06-25T20:47:30 IST" name="setUp" finished-at="2026-06-25T20:47:31 IST" duration-ms="1032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.org.CreateOrganizationTest@682b2fa]" started-at="2026-06-25T20:47:31 IST" name="login" finished-at="2026-06-25T20:47:36 IST" duration-ms="5044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createOrganizationTest()[pri:0, instance:crm.org.CreateOrganizationTest@682b2fa]" started-at="2026-06-25T20:47:36 IST" name="createOrganizationTest" finished-at="2026-06-25T20:47:51 IST" duration-ms="15102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.org.CreateOrganizationTest@682b2fa]" started-at="2026-06-25T20:47:51 IST" name="logout" finished-at="2026-06-25T20:47:53 IST" duration-ms="2115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.org.CreateOrganizationTest@682b2fa]" started-at="2026-06-25T20:47:53 IST" name="tearDown" finished-at="2026-06-25T20:47:53 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.org.CreateOrganizationTest -->
+      <class name="crm.documents.UploadDocumentTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.documents.UploadDocumentTest@662ac478]" started-at="2026-06-25T20:49:32 IST" name="setUp" finished-at="2026-06-25T20:49:32 IST" duration-ms="956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.documents.UploadDocumentTest@662ac478]" started-at="2026-06-25T20:49:32 IST" name="login" finished-at="2026-06-25T20:49:38 IST" duration-ms="5439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="uploadDocumentTest()[pri:0, instance:crm.documents.UploadDocumentTest@662ac478]" started-at="2026-06-25T20:49:38 IST" name="uploadDocumentTest" finished-at="2026-06-25T20:49:51 IST" duration-ms="12689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadDocumentTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.documents.UploadDocumentTest@662ac478]" started-at="2026-06-25T20:49:51 IST" name="logout" finished-at="2026-06-25T20:49:53 IST" duration-ms="2102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.documents.UploadDocumentTest@662ac478]" started-at="2026-06-25T20:49:53 IST" name="tearDown" finished-at="2026-06-25T20:49:53 IST" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.documents.UploadDocumentTest -->
+      <class name="crm.login.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.login.LoginTest@10683d9d]" started-at="2026-06-25T20:47:17 IST" name="setUp" finished-at="2026-06-25T20:47:18 IST" duration-ms="1589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.login.LoginTest@10683d9d]" started-at="2026-06-25T20:47:18 IST" name="login" finished-at="2026-06-25T20:47:23 IST" duration-ms="5046" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="loginTest()[pri:0, instance:crm.login.LoginTest@10683d9d]" started-at="2026-06-25T20:47:23 IST" name="loginTest" finished-at="2026-06-25T20:47:24 IST" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.login.LoginTest@10683d9d]" started-at="2026-06-25T20:47:24 IST" name="logout" finished-at="2026-06-25T20:47:29 IST" duration-ms="5722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.login.LoginTest@10683d9d]" started-at="2026-06-25T20:47:29 IST" name="tearDown" finished-at="2026-06-25T20:47:30 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.login.LoginTest -->
+      <class name="crm.opportunity.OpportunityTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.opportunity.OpportunityTest@7dcf94f8]" started-at="2026-06-25T20:48:16 IST" name="setUp" finished-at="2026-06-25T20:48:17 IST" duration-ms="963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.opportunity.OpportunityTest@7dcf94f8]" started-at="2026-06-25T20:48:17 IST" name="login" finished-at="2026-06-25T20:48:22 IST" duration-ms="5057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createOpportunityTest()[pri:0, instance:crm.opportunity.OpportunityTest@7dcf94f8]" started-at="2026-06-25T20:48:22 IST" name="createOpportunityTest" finished-at="2026-06-25T20:48:41 IST" duration-ms="18614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOpportunityTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.opportunity.OpportunityTest@7dcf94f8]" started-at="2026-06-25T20:48:41 IST" name="logout" finished-at="2026-06-25T20:48:43 IST" duration-ms="2190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.opportunity.OpportunityTest@7dcf94f8]" started-at="2026-06-25T20:48:43 IST" name="tearDown" finished-at="2026-06-25T20:48:43 IST" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- crm.opportunity.OpportunityTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="crm.lead.LeadTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.lead.LeadTest@229f66ed]" started-at="2026-06-25T20:48:43 IST" name="setUp" finished-at="2026-06-25T20:48:44 IST" duration-ms="1021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.lead.LeadTest@229f66ed]" started-at="2026-06-25T20:48:44 IST" name="login" finished-at="2026-06-25T20:48:50 IST" duration-ms="5053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createLeadTest()[pri:0, instance:crm.lead.LeadTest@229f66ed]" started-at="2026-06-25T20:48:50 IST" name="createLeadTest" finished-at="2026-06-25T20:49:04 IST" duration-ms="14277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.lead.LeadTest@229f66ed]" started-at="2026-06-25T20:49:04 IST" name="logout" finished-at="2026-06-25T20:49:07 IST" duration-ms="2852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.lead.LeadTest@229f66ed]" started-at="2026-06-25T20:49:07 IST" name="tearDown" finished-at="2026-06-25T20:49:07 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.lead.LeadTest -->
+      <class name="crm.products.CreateProductTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.products.CreateProductTest@31190526]" started-at="2026-06-25T20:49:07 IST" name="setUp" finished-at="2026-06-25T20:49:08 IST" duration-ms="1072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.products.CreateProductTest@31190526]" started-at="2026-06-25T20:49:08 IST" name="login" finished-at="2026-06-25T20:49:13 IST" duration-ms="5366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createProductTest()[pri:0, instance:crm.products.CreateProductTest@31190526]" started-at="2026-06-25T20:49:13 IST" name="createProductTest" finished-at="2026-06-25T20:49:29 IST" duration-ms="15451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProductTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.products.CreateProductTest@31190526]" started-at="2026-06-25T20:49:29 IST" name="logout" finished-at="2026-06-25T20:49:31 IST" duration-ms="2246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:crm.products.CreateProductTest@31190526]" started-at="2026-06-25T20:49:31 IST" name="tearDown" finished-at="2026-06-25T20:49:32 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- crm.products.CreateProductTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,0 +1,19 @@
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="listeners_utility.List_Imp" />
+	</listeners>
+
+	<test name="Test">
+		<classes>
+			<class name="crm.login.LoginTest" />
+			<class name="crm.org.CreateOrganizationTest" />
+			<class name="crm.contact.ContactTest" />
+			<class name="crm.opportunity.OpportunityTest" />
+			<class name="crm.lead.LeadTest" />
+			<class name="crm.products.CreateProductTest" />
+			<class name="crm.documents.UploadDocumentTest" />
+		</classes>
+	</test>
+
+</suite>

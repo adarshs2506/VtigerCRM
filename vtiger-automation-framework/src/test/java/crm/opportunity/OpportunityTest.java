@@ -24,99 +24,88 @@ import object_repository.OpportunityPage;
  */
 public class OpportunityTest extends BaseClass {
 
-    @Test
-    public void createOpportunityTest()
-            throws EncryptedDocumentException, FileNotFoundException, IOException, ParseException, InterruptedException {
+	@Test
+	public void createOpportunityTest() throws EncryptedDocumentException, FileNotFoundException, IOException,
+			ParseException, InterruptedException {
 
-        // ==============================
-        // Step 1: Read Test Data
-        // ==============================
-        FileUtility fUtil = new FileUtility();
+		// ==============================
+		// Step 1: Read Test Data
+		// ==============================
+		FileUtility fUtil = new FileUtility();
 
-        String baseOppName = fUtil.getDataFromExcelFile("opportunity", 1, 0);
-        String closingDate = fUtil.getDataFromExcelFile("opportunity", 1, 1);
+		String baseOppName = fUtil.getDataFromExcelFile("opportunity", 1, 0);
+		String closingDate = fUtil.getDataFromExcelFile("opportunity", 1, 1);
 
-        String expectedOppName = baseOppName + "_"
-                + JavaUtility.generateRandomNumber();
+		String expectedOppName = baseOppName + "_" + JavaUtility.generateRandomNumber();
 
-        // ==============================
-        // Step 2: Navigate to Opportunity Module
-        // ==============================
-        HomePage hp = new HomePage(driver);
-        hp.getOppLink().click();
+		// ==============================
+		// Step 2: Navigate to Opportunity Module
+		// ==============================
+		HomePage hp = new HomePage(driver);
+		hp.getOppLink().click();
 
-        OpportunityPage op = new OpportunityPage(driver);
+		OpportunityPage op = new OpportunityPage(driver);
 
-        op.getCreateOppBtn().click();
+		op.getCreateOppBtn().click();
 
-        // ==============================
-        // Step 3: Fill Opportunity Details
-        // ==============================
-        op.getOppNameField().sendKeys(expectedOppName);
+		// ==============================
+		// Step 3: Fill Opportunity Details
+		// ==============================
+		op.getOppNameField().sendKeys(expectedOppName);
 
-        op.getClosingDateField().sendKeys(closingDate);
+		op.getClosingDateField().sendKeys(closingDate);
 
-        Select stage = new Select(op.getSalesStageDropdown());
-        stage.selectByIndex(1);
+		Select stage = new Select(op.getSalesStageDropdown());
+		stage.selectByIndex(1);
 
-        // Related To = Organizations
-        Select related = new Select(op.getRelatedToDropdown());
-        related.selectByVisibleText("Organizations");
+		// Related To = Organizations
+		Select related = new Select(op.getRelatedToDropdown());
+		related.selectByVisibleText("Organizations");
 
-        // ==============================
-        // Step 4: Select Existing Organization
-        // ==============================
-        String parentWindow = driver.getWindowHandle();
+		// ==============================
+		// Step 4: Select Existing Organization
+		// ==============================
+		String parentWindow = driver.getWindowHandle();
 
-        op.getOrganizationLookupIcon().click();
+		op.getOrganizationLookupIcon().click();
 
-        Set<String> allWindows = driver.getWindowHandles();
+		Set<String> allWindows = driver.getWindowHandles();
 
-        for (String window : allWindows) {
+		for (String window : allWindows) {
 
-            if (!window.equals(parentWindow)) {
-                driver.switchTo().window(window);
-                break;
-            }
-        }
+			if (!window.equals(parentWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
 
-        System.out.println("Switched to Child Window");
+		// Existing Organization Name
+		driver.findElement(By.linkText("adarsh_0121_843")).click();
 
-        // Existing Organization Name
-        driver.findElement(By.linkText("adarsh_0121_843")).click();
+		System.out.println("Organization selected");
 
-        System.out.println("Organization selected");
+		// Switch back to parent window
+		driver.switchTo().window(parentWindow);
 
-        // Switch back to parent window
-        driver.switchTo().window(parentWindow);
+		Thread.sleep(2000);
 
-        System.out.println("Switched to Parent Window");
+		// ==============================
+		// Step 5: Save Opportunity
+		// ==============================
 
-        Thread.sleep(2000);
+		op.getSaveBtn().click();
 
-        // ==============================
-        // Step 5: Save Opportunity
-        // ==============================
-        System.out.println("Before Save");
+		// ==============================
+		// Step 6: Validation
+		// ==============================
+		String actualOppName = driver.findElement(By.id("dtlview_Opportunity Name")).getText();
 
-        op.getSaveBtn().click();
+		System.out.println("[OPP] Expected : " + expectedOppName);
+		System.out.println("[OPP] Actual   : " + actualOppName);
 
-        System.out.println("After Save");
+		Assert.assertEquals(actualOppName, expectedOppName, "Opportunity Name mismatch!");
 
-        // ==============================
-        // Step 6: Validation
-        // ==============================
-        String actualOppName = driver
-                .findElement(By.id("dtlview_Opportunity Name"))
-                .getText();
+		System.out.println("[Opp] PASS — " + "Opportunity Created Successfully" + actualOppName);
 
-        System.out.println("Expected : " + expectedOppName);
-        System.out.println("Actual   : " + actualOppName);
-
-        Assert.assertEquals(actualOppName, expectedOppName,
-                "Opportunity Name mismatch!");
-
-        System.out.println("Opportunity Created Successfully");
-        System.out.println("Test Completed");
-    }
+	}
 }
